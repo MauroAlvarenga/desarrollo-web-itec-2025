@@ -1,0 +1,135 @@
+<!-- Generar el formulario siguiente de acuerdo a los siguientes requisitos
+• Hay una lista desplegable múltiple con el name «velocidad» y con las siguientes
+opciones: opción «100 Mbits» con el value 100_mbits, opción «1000 Mbits» con
+el value 1000_mbits.
+• Hay los siguientes cuadros de texto:cuadro de texto con el texto «DNI» y el name dni,
+cuadro de texto con el texto «Nombre» y el name nombre, cuadro de texto con el
+texto «Apellidos» y el name apellidos, cuadro de texto con el texto «Email» y
+el name email
+• Hay un control para elegir el color.
+• Hay un textarea que mide 6 filas y 49 columnas que lleva dentro el texto «Por
+favor, escriba aquí»
+• Contiene los siguientes checkboxes :checkbox con el name «procesador»
+, value «procesadoramd» y el texto «AMD», checkbox con el name «procesador»
+, value «procesadorintel_i5» y el texto «Intel i5», checkbox con
+el name «procesador» , value «procesadorintel_i7» y el texto «Intel i7».
+• Hay un control para indicar la hora.
+• Contiene los siguientes radiobuttons :radio con el name «red» , value «red2g» y
+el texto «2G», radio con el name «red» , value «red3g» y el texto «3G», radio con
+el name «red» , value «red4g» y el texto «4G».
+• Hay un control para elegir ficheros.
+• Contiene los siguientes checkboxes :checkbox con el name «asignatura»
+, value «asignaturahistoria» y el texto «Historia», checkbox con
+el name «asignatura» , value «asignaturageografia» y el texto «Geografía»,
+checkbox con el name «asignatura» , value «asignaturalengua» y el texto «Lengua»,
+checkbox con el name «asignatura» , value «asignaturamatematicas» y el texto
+«Matemáticas».
+• Hay un control para indicar la hora.
+• Hay un control para elegir ficheros.
+• Hay un textarea que mide 8 filas y 49 columnas que lleva dentro el texto «Inserte
+aqui el texto» -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de practica</title>
+  </head>
+  <body>
+    <h1>Formulario de práctica</h1>
+    <form action="index.html" style="border: 1px solid black; padding: 10px;">
+
+      <label for="velocidad">Velocidad:</label>
+      <br>
+      <select name="velocidad" id="velocidad" multiple>
+        <option value="100_mbits">100 Mbits</option>
+        <option value="1000_mbits">1000 Mbits</option>
+      </select>
+      <br><br>
+
+      <label for="dni">DNI:</label>
+      <br>
+      <input type="text" id="dni" name="dni">
+      <br>
+      <label for="nombre">Nombre:</label>
+      <br>
+      <input type="text" id="nombre" name="nombre">
+      <br>
+      <label for="apellidos">Apellidos:</label>
+      <br>
+      <input type="text" id="apellidos" name="apellidos">
+      <br>
+      <label for="email">Email:</label>
+      <br>
+      <input type="email" id="email" name="email">
+      <br><br>
+
+      <label for="color">Color:</label>
+      <br>
+      <input type="color" id="color" name="color">
+      <br><br>
+
+      <label for="textarea">Texto:</label>
+      <br>
+      <textarea id="textarea" name="textarea" rows="6" cols="49">Por favor, escriba aquí</textarea>
+      <br><br>
+
+      <label for="">Procesador:</label>
+      <br>
+      <input type="checkbox" name="procesador" value="procesadoramd">AMD
+      <br>
+      <input type="checkbox" name="procesador" value="procesadorintel_i5">Intel i5
+      <br>
+      <input type="checkbox" name="procesador" value="procesadorintel_i7">Intel i7
+      <br><br>
+
+      <label for="hora">Hora:</label>
+      <br>
+      <input type="time" id="hora" name="hora">
+      <br><br>
+
+      <label for="">Red:</label>
+      <br>
+      <input type="radio" name="red" value="red2g">2G
+      <br>
+      <input type="radio" name="red" value="red3g">3G
+      <br>
+      <input type="radio" name="red" value="red4g">4G
+      <br><br>
+
+      <label for="fichero">Fichero:</label>
+      <br>
+      <input type="file" id="fichero" name="fichero">
+      <br><br>
+
+      <label for="">Asignaturas:</label>
+      <br>
+      <input type="checkbox" name="asignatura" value="asignaturahistoria">Historia
+      <br>
+      <input type="checkbox" name="asignatura" value="asignaturageografia">Geografía
+      <br>
+      <input type="checkbox" name="asignatura" value="asignaturalengua">Lengua
+      <br>
+      <input type="checkbox" name="asignatura" value="asignaturamatematicas">Matemáticas
+      <br><br>
+
+      <label for="hora2">Hora:</label>
+      <br>
+      <input type="time" id="hora2" name="hora2">
+      <br><br>
+
+      <label for="fichero2">Fichero:</label>
+      <br>
+      <input type="file" id="fichero2" name="fichero2">
+      <br>
+      <label for="textarea2">Texto:</label>
+      <br>
+      <textarea id="textarea2" name="textarea2" rows="8" cols="49">Inserte aquí el texto</textarea>
+      <br><br>
+      
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Restablecer">
+    </form>
+  </body>
+</html>
