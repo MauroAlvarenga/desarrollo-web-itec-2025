@@ -1,0 +1,25 @@
+.cta-container {
+  background-image: url("./back3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 60px;
+}
+
+.cta-text {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cta-button {
+  background-color: #626bb2;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
