@@ -1,0 +1,36 @@
+* {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  list-style: none;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  list-style-type: none;
+
+}
+
+.nav-list-item:last-child .nav-list-item-link {
+  border-right: none;
+}
+
+.nav-list-item {
+  float: left;
+}
+
+.nav-list-item-link {
+  width: 100px;
+  text-decoration: none;
+  padding: 10px 5px;
+  border-right: 1px solid white;
+  background-color: #336699;
+}
+
+.nav-list-item-link:hover {
+  background-color: #7098c0;
+  color: white;
+}
