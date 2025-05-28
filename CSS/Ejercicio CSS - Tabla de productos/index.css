@@ -1,0 +1,42 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  width: 80%; /* Para que el titulo quede centrado a la tabla */
+}
+
+.styled-table {
+  width: 80%;
+  margin-top: 20px; 
+  caption-side: bottom;
+}
+
+h1 {
+  font-size: 20px;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  padding: 10px;
+  background-color: #009688;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #c7e2e0;
+}
+
+td:nth-child(3)::after {
+  content: " €";
+}
