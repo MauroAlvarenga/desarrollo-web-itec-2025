@@ -1,0 +1,32 @@
+ul.menu {
+  width: 140px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ffc83d;
+}
+
+ul.menu li {
+  border-bottom: 1px solid #ffc83d;
+}
+
+ul.menu li:last-child {
+  border-bottom: none;
+}
+
+ul.menu li a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  background-color: #E5F3FE;
+}
+
+ul.menu li a:hover {
+  background-color: #c8e2f7;
+}
+
+li a::before {
+  content: "👉 ";
+}
