@@ -1,0 +1,56 @@
+article {
+  float: left;
+  width: 350px;
+  height: 140px;
+  background-color: #F7f3f3;
+  margin: 10px;
+}
+
+img {
+  padding: 20px;
+  width: 100px;
+  float: left;
+}
+
+.datos-producto {
+  float: right;
+  width: 190px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.borrar {
+  float: right;
+  padding: 0 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.nombre {
+  float: right;
+  font-weight: bold;
+}
+
+.precio {
+  float: right;
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0;
+  clear: both;
+}
+
+.colores {
+  clear: both;
+}
+
+li {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50px;
+  margin-left: 5px;
+  background-color: brown;
+  border: 1px solid #000;
+}
