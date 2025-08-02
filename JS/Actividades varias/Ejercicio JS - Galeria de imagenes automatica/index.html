@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio - Galería de imágenes automática</title>
+</head>
+<body>
+  <h1>Ejercicio - Galeria de imagenes automatica</h1>
+  <p>La imagen que se ve a continuación cambiará cada 3 segundos.</p>
+  <img src="https://placehold.co/400/orange/white?text=Imagen+1" alt="carrusel">
+
+  <script>
+    const images = [
+      'https://placehold.co/400/orange/white?text=Imagen+1',
+      'https://placehold.co/400/green/white?text=Imagen+2',
+      'https://placehold.co/400/blue/white?text=Imagen+3'
+    ];
+    
+    let currentIndex = 0;
+    
+    function changeImage() {
+      const imgElement = document.querySelector('img');
+      imgElement.src = images[currentIndex];
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+    
+    // Cambiar imagen cada 3 segundos
+    setInterval(changeImage, 3000);
+
+    changeImage();
+  </script>
+</body>
+</html>

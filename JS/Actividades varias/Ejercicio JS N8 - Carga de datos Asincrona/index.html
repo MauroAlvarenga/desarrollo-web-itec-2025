@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio JS 8 - Carga de datos asincrona</title>
+</head>
+<body>
+  <h1>Ejercicio - Carga de datos asincrona</h1>
+  <p>Este ejercicio simula la carga de datos asincrónica desde un servidor. Al presionar el botón, se dispara una breve espera para simular la carga de datos, y luego actualiza la interfaz.</p>
+  <br>
+  <button onclick="loadAsyncData()">Cargar Datos</button>
+  <br>
+  <p id="loading" style="display: none;"><em>Cargando datos...</em></p>
+  <script>
+    const loadData = () => {
+      const data = {
+          title: "Datos Cargados",
+          description: "Estos son los datos que se han cargado de forma asincrónica."
+        };
+
+        // Actualizar la interfaz con los datos cargados
+        document.body.innerHTML += `<h2>${data.title}</h2>`;
+        document.body.innerHTML += `<p>${data.description}</p>`;
+    };
+
+    function loadAsyncData() {
+      document.getElementById('loading').style.display = 'block';
+      // Simular una carga de datos asincrónica, esperando 2 segundos
+      setTimeout(() => { 
+        loadData()
+        document.getElementById('loading').style.display = 'none';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar contenido de un elemento</title>
+  </head>
+  <body>
+    <h1>Ejercicio - Cambiar contenido de un elemento</h1>
+    <p>Dado el siguiente elemento, al presionar el botón, su contenido cambiará:</p>
+    <br>
+    <p id="element">¡Hola, Mundo!</p>
+    <br>
+    <button onclick="changeContent()">Cambiar Contenido</button>
+
+    <script>
+      function changeContent() {
+        document.getElementById('element').textContent = '¡Bienvenido a mi sitio web!';
+      }
+    </script>
+  </body>
+</html>

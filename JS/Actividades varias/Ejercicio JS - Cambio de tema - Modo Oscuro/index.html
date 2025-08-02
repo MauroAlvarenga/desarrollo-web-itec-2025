@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio - Cambio de tema, modo oscuro</title>
+  <style>
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .clear-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio - Cambio de tema - Modo oscuro</h1>
+  <p>Dado el siguiente botón se modifica el esquema de colores de la página para simular un cambio entre modo claro y modo oscuro.</p>
+  <button onclick="toggleTheme()">Cambiar modo</button>
+
+  <script>
+    let isDarkMode = false;
+    const toggleTheme = () => {
+      if (isDarkMode) {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('clear-mode');
+      } else {
+        document.body.classList.remove('clear-mode');
+        document.body.classList.add('dark-mode');
+      }
+      isDarkMode = !isDarkMode;
+    };
+  </script>
+</body>
+</html>

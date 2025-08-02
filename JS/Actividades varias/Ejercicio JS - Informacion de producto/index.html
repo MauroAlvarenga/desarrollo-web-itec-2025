@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio - Informacion de producto</title>
+</head>
+<body>
+  <h1>Ejercicio - Informacion de producto</h1>
+  <p>Dado un objeto definido con datos de un producto, se actualizarán los datos de la interfaz con el contenido de dicho objeto.</p>
+  <div id="product">
+    <h2 id="product-name">Nombre del Producto: </h2>
+    <p id="product-description">Descripción del producto: </p>
+    <p id="product-price">Precio: </p>
+    <p id="product-stock">Stock: </p>
+  </div>
+  <button onclick="updateUI()">Actualizar interfaz</button>
+  <script>
+    // Producto: 
+    // Se pueden actualizar los datos del siguiente objeto para modificar la interfaz.
+    const product = {
+        name: "Remera",
+        description: "Remera de algodón 100%",
+        price: 19.99,
+        stock: 50
+    };
+
+    function updateUI() {
+      const productName = document.getElementById("product-name");
+      const productDescription = document.getElementById("product-description");
+      const productPrice = document.getElementById("product-price");
+      const productStock = document.getElementById("product-stock");
+      productName.textContent = productName.textContent.concat(product.name);
+      productDescription.textContent = productDescription.textContent.concat(product.description);
+      productPrice.textContent = productPrice.textContent.concat(`$${product.price}`);
+      productStock.textContent = productStock.textContent + product.stock;
+    };
+  </script>
+</body>
+</html>

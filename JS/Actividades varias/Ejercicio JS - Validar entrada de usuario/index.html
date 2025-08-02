@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios: Validar entrada de usuario</title>
+    <style>
+      #greenCheck, #redCross {
+        display: none;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio - Validar entrada de usuario</h1>
+    <p>Dado el siguiente campo de ingreso de texto, javascript debe validar que el usuario haya ingresado un email con @ y que el campo no esté vacío. Caso contrario, se mostrará una alerta.</p>
+    <br>
+    <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+    <br><br>
+    <button onclick="validateField()">Enviar</button>
+    <span id="greenCheck">✅</span>
+    <span id="redCross">❌</span>
+    <script>
+      function validateField() {
+        const emailInput = document.getElementById('email').value;
+        const greenCheck = document.getElementById('greenCheck');
+        const redCross = document.getElementById('redCross');
+        if (emailInput === '' || !emailInput.includes('@')) {
+          greenCheck.style.display = 'none';
+          redCross.style.display = 'inline';
+          alert('Por favor, ingrese un email válido que contenga "@" y no esté vacío.');
+        } else {
+          greenCheck.style.display = 'inline';
+          redCross.style.display = 'none';
+          emailInput.style.backgroundColor = 'lightgreen';
+        }
+      };
+    </script>
+    <br>
+  </body>
+</html>

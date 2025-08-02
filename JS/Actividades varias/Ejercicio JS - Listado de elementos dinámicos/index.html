@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de elementos dinámicos</title>
+</head>
+<body>
+  <h1>Ejercicio - Listado de elementos dinámicos</h1>
+  <p>Dado un listado de elementos se utiliza un bucle para construir un listado no ordenado.</p>
+  <label for="list">Ingrese elementos separados por coma (,):</label>
+  <br><br>
+  <input type="text" name="list" id="list" placeholder="manzana, naranja, banana">
+  <button onclick="generateList()">Generar Listado</button>
+  <script>
+    function generateList() {
+      const input = document.getElementById('list').value;
+      const items = input.split(',');
+      const ul = document.createElement('ul');
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item.trim();
+        ul.appendChild(li);
+      });
+      // Limpiar el contenido previo
+      document.body.querySelector('ul')?.remove();
+      // Agregar el nuevo listado al cuerpo del documento
+      document.body.appendChild(ul);
+      // Limpiar el campo de entrada
+      document.getElementById('list').value = '';
+    }
+  </script>
+</body>
+</html>
