@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio - Interacción compleja: Filtrado de lista</title>
+</head>
+<body>
+  <h1>Ejercicio - Interacción compleja: Filtrado de lista</h1>
+  <p>Dado un listado generado de elementos, se añade un nuevo campo capaz de filtrar dichos elementos y mostrar solamente los que coinciden. </p>
+  <p>Se debe generar el listado antes de intentar filtrar.</p>
+  <br>
+  <input type="text" name="list" id="list" placeholder="manzana, naranja, banana">
+  <br><br>
+  <button onclick="generateList()">Generar Listado</button>
+  <br><br>
+  <label for="filter">Filtrar elementos:</label>
+  <input type="text" id="filter" oninput="filterList()" placeholder="Escriba para filtrar...">
+  <br><br>
+  <script>
+    function generateList() {
+      const input = document.getElementById('list').value;
+      const items = input.split(',');
+      const ul = document.createElement('ul');
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item.trim();
+        ul.appendChild(li);
+      });
+      // Limpiar el contenido previo
+      document.body.querySelector('ul')?.remove();
+      // Agregar el nuevo listado al cuerpo del documento
+      document.body.appendChild(ul);
+      // Limpiar el campo de entrada
+      document.getElementById('list').value = '';
+    }
+
+    function filterList() {
+      const filter = document.getElementById('filter').value.toLowerCase();
+      const items = document.querySelectorAll('ul li');
+      items.forEach(item => {
+        if (item.textContent.toLowerCase().includes(filter)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -7,6 +7,56 @@
 </head>
 <body>
   <h1>Ejercicio - Manipulacion del DOM: Tabla de datos</h1>
-  <p></p>
+  <p>Dado un array de objetos, donde cada objeto represente un "libro" con propiedades como titulo, autor y año, se genera una tabla HTML (table) dinámicamente con JavaScript, donde cada libro sea una fila (tr) y sus propiedades sean celdas (td). Añade una fila de encabezados (th) para la tabla.</p>
+  <br>
+
+  <table id="table" border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Año</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Las filas se generarán dinámicamente aquí -->
+    </tbody>
+  </table>
+
+  <script>
+    // Objeto con datos de ejemplo
+    let books = [
+      { title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+      { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+      { title: 'Rayuela', author: 'Julio Cortázar', year: 1963 },
+      { title: 'Cien años de soledad', author: 'Gabriel García Márquez', year: 1967 },
+      { title: 'El túnel', author: 'Ernesto Sabato', year: 1948 },
+      { title: 'El Aleph', author: 'Jorge Luis Borges', year: 1945 },
+      { title: 'Ficciones', author: 'Jorge Luis Borges', year: 1944 }
+    ];
+
+    const createTable = (data) => {
+      const tableBody = document.getElementById('table-body');
+      tableBody.innerHTML = ''; // Limpiar el contenido previo
+      for (let book of data) {
+        const row = document.createElement('tr');
+        const titleCell = document.createElement('td');
+        const authorCell = document.createElement('td');
+        const yearCell = document.createElement('td');
+
+        titleCell.textContent = book.title;
+        authorCell.textContent = book.author;
+        yearCell.textContent = book.year;
+
+        row.appendChild(titleCell);
+        row.appendChild(authorCell);
+        row.appendChild(yearCell);
+        tableBody.appendChild(row);
+      } 
+    }
+
+    // Llamar a la función para crear la tabla al cargar la página
+    createTable(books);
+  </script>
 </body>
 </html>
